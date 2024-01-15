@@ -11,6 +11,7 @@ def index():
         locations = util.get_location_names()
     except:
         locations.append("No Data Available")
+    print(locations)
     return render_template('index.html', locations=locations)
 
 
@@ -39,7 +40,5 @@ def predict_home_price():
     return response
 
 
-if __name__ == "__main__":
-    print("Starting Python Flask Server For Home Price Prediction...")
-    util.load_saved_artifacts()
-    app.run()
+util.load_saved_artifacts()
+app.run()
