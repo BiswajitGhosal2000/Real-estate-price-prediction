@@ -3,11 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="website for price prediction of house in bengaluru using machine learning model">
+    <link rel="icon" type="image/x-icon" href="https://cdn1.vectorstock.com/i/1000x1000/20/60/real-estate-house-logo-vector-24292060.jpg">
     <title>Bangalore House Price Prediction</title>
     <link rel="stylesheet" href="/static/app.css">
 </head>
 <body>
 <div class="img"></div>
+
+<header>
+    <h1 style="text-align:center;">Bengaluru House Price</h1>
+</header>
 <form class="form">
     <h2>Area (Sq.Ft)</h2>
     <input class="area" type="text" id="uiSqft" name="Squareft" value="2000">
@@ -48,7 +54,7 @@
     <button class="submit" onclick="onClickedEstimatePrice()" type="button">Price</button>
     <div id="uiEstimatedPrice" class="result"><h2></h2></div>
 </form>
-<footer>
+<footer style="margin:10px">
     <p>
         <a href="#" style="text-decoration: none;"> <b style="color:black;">1800-XXX-125-XXXX</b> </a>
         <a href="mailto:ghosalbiswajit11@gmail.com"><img
