@@ -6,7 +6,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    locations = util.get_location_names()
+    return render_template('index.html', locations=locations)
 
 
 @app.route('/get_location_names', methods=['GET'])

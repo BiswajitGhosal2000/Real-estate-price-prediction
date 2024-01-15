@@ -47,8 +47,11 @@
     </div>
     <h2>Location</h2>
     <div>
-        <select class="location" name="location" id="uiLocations">
-            <option value="" disabled="disabled" selected="selected">Choose a Location</option>
+        <select class="location" name="location" id="uiLocations" required>
+            <option value="" disabled="disabled" >Choose a Location</option>
+            {% for location in locations %}
+                <option value={{location}} >{{location}}</option>
+            {% endfor %}
         </select>
     </div>
     <button class="submit" onclick="onClickedEstimatePrice()" type="button">Price</button>
