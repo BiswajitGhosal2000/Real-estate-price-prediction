@@ -40,4 +40,4 @@ def predict_home_price():
 
 
 util.load_saved_artifacts()
-app.run(host="0.0.0.0/0")
+app.run()
