@@ -11,7 +11,6 @@ def index():
         locations = util.get_location_names()
     except:
         locations.append("No Data Available")
-    print(locations)
     return render_template('index.html', locations=locations)
 
 
@@ -41,4 +40,4 @@ def predict_home_price():
 
 
 util.load_saved_artifacts()
-app.run()
+app.run(host="0.0.0.0/0", debug=True)
