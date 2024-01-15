@@ -6,18 +6,22 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    locations = util.get_location_names()
+    locations = []
+    try:
+        locations = util.get_location_names()
+    except:
+        locations.append("No Data Available")
     return render_template('index.html', locations=locations)
 
 
-@app.route('/get_location_names', methods=['GET'])
-def get_location_names():
-    response = jsonify({
-        'locations': util.get_location_names()
-    })
-    response.headers.add('Access-Control-Allow-Origin', '*')
-
-    return response
+# @app.route('/get_location_names', methods=['GET'])
+# def get_location_names():
+#     response = jsonify({
+#         'locations': util.get_location_names()
+#     })
+#     response.headers.add('Access-Control-Allow-Origin', '*')
+#
+#     return response
 
 
 @app.route('/predict_home_price', methods=['GET', 'POST'])
